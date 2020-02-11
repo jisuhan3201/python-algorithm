@@ -31,5 +31,23 @@ def main():
 
     display(tree)
 
+def dfs(tree, start):
+    visited = []
+    stack = []
+
+    stack.append(start)
+
+    while stack:
+        node = stack.pop()
+        print(node.data)
+        
+        visited.append(stack.data)
+
+        if tree.left is not None:
+            stack.append(tree.left)
+
+        
+
+
 if __name__ == "__main__":
     main()
